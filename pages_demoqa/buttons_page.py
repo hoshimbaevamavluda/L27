@@ -1,7 +1,7 @@
 from playwright.sync_api import expect
 
 from pages_demoqa.base_page import BasePage
-from pages_demoqa.data import base_url_demoqa
+from data import base_url_demoqa
 
 
 class ButtonsPage(BasePage):

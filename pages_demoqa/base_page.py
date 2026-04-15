@@ -1,4 +1,4 @@
-from pages_demoqa.data import base_url_demoqa
+from data import base_url_demoqa
 
 
 class BasePage:

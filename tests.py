@@ -17,5 +17,3 @@ def test_27_02(page):
     btn_page.assert_subtext_in_text(txt_message, message, msg="Текст ")
     print(f"Проверка отображения текста: {txt_message}."
           f" Прошла успешно ✅")
-
-
