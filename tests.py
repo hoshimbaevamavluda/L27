@@ -1,4 +1,5 @@
 from pages_demoqa.buttons_page import ButtonsPage
+from pages_demoqa.text_box import TextBox
 
 
 def test_27_01(page):
@@ -17,3 +18,12 @@ def test_27_02(page):
     btn_page.assert_subtext_in_text(txt_message, message, msg="Текст ")
     print(f"Проверка отображения текста: {txt_message}."
           f" Прошла успешно ✅")
+
+def test_27_03(page):
+    t_box_page = TextBox(page)
+    t_box_page.open_page()
+    t_box_page.fill_full_name("Mavluda")
+    name = t_box_page.input_value_name()
+    t_box_page.fill_email("mava@mail.ru")
+    email = t_box_page.input_value_email()
+    print(f"Имя: {name}, Email: {email}")

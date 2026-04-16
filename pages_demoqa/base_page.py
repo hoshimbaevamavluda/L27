@@ -24,4 +24,3 @@ class BasePage:
         if isinstance(locator, str):
             locator = self.page.locator(locator)
         locator.click(button=button, click_count=click_count, no_wait_after=no_wait_after)
-
