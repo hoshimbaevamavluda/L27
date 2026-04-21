@@ -1,7 +1,7 @@
 from playwright.sync_api import expect
 
 from pages_demoqa.base_page import BasePage
-from data import base_url_demoqa
+from data import url_buttons_page
 
 
 class ButtonsPage(BasePage):
@@ -12,7 +12,7 @@ class ButtonsPage(BasePage):
         self.click_message = self.page.locator("#dynamicClickMessage")
 
     def open_page(self):
-        self.page.goto(f"{base_url_demoqa}buttons")
+        self.page.goto(f"{url_buttons_page}")
 
     def assert_btn_text(self):
         text_btn = self.btn_double_click_me.inner_text()
@@ -25,5 +25,3 @@ class ButtonsPage(BasePage):
         expect(self.click_message).to_have_text(message)
         txt_btn = self.click_message.inner_text()
         return txt_btn
-
-
