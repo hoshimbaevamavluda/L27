@@ -27,3 +27,9 @@ def test_27_03(page):
     t_box_page.fill_email("mava@mail.ru")
     email = t_box_page.input_value_email()
     print(f"Имя: {name}, Email: {email}")
+
+def test_27_05(page):
+    t_box_page = TextBox(page)
+    t_box_page.open_page()
+    print("inner_text:", repr(t_box_page.text_content_address()))
+    print("text_content:", repr(t_box_page.inner_text_address()))

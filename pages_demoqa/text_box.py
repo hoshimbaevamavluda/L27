@@ -9,6 +9,8 @@ class TextBox(BasePage):
         self.input_full_name = self.page.locator(self.full_name)
         self.email = "#userEmail"
         self.input_email = self.page.locator(self.email)
+        self.label_address = self.page.locator("#currentAddress-label")
+
 
     def open_page(self):
         self.page.goto(f"{url_text_box_page}")
@@ -24,3 +26,9 @@ class TextBox(BasePage):
 
     def input_value_email(self):
         return self.input_email.input_value()
+
+    def inner_text_address(self):
+        return self.label_address.inner_text()
+
+    def text_content_address(self):
+        return self.label_address.text_content()
